@@ -1,0 +1,291 @@
+:root {
+   --color-cream: rgb(255, 251, 219);
+   --color-red: rgb(201, 32, 34);
+   --color-red-dark: rgb(153, 1, 0);
+   --color-grey: rgb(169, 169, 169);
+   --color-grey-dark: rgb(128, 128, 128);
+   --color-white: white;
+}
+
+body {
+    font-family: "Calibri";
+}
+
+iframe {
+    width: 100%;
+}
+
+
+/* NAVIGATION */
+.navbar {
+    background-color: var(--color-cream);
+    border-bottom: 1px solid var(--color-red-dark);
+    position: relative;
+}
+
+.bd-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.nav-link {
+    color: var(--color-grey-dark);
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.nav-link:hover, .nav-item.active .nav-link {
+    color: var(--color-red-dark);
+}
+
+.kontact {
+    position: absolute;
+    right: 15px;
+    top: 45px;
+}
+
+@media(max-width: 991px) {
+    .kontact {
+        display: none;
+    }
+}
+
+.kontact > .btn {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+.kontact > .btn:hover {
+    background-color: var(--color-red-dark);
+}
+
+.navbar-toggler {
+    border: 2px solid var(--color-red-dark);
+    color: var(--color-red-dark);
+}
+
+
+/* MODAL */
+
+.modal-header {
+    background-color: var(--color-red-dark);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.modal-header button {
+    color: var(--color-white);
+}
+
+.kontaktInfo {
+    color: var(--color-grey-dark);
+}
+
+.kontaktInfo i {
+    margin-right: 8px;
+}
+
+.kontaktInfo a {
+    color: var(--color-red);
+}
+
+#kontaktModal .submitButton {
+    background-color: darkgreen;
+    color: var(--color-white);
+}
+
+/* BODY */
+
+#floatingKontakt {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    #floatingKontakt {
+        display: block;
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        z-index: 50;
+        background-color: darkgreen;
+        color: var(--color-white);
+        width: 100px;
+    }
+}
+
+.banner {
+    width: 100%;
+    height: 500px;
+    background-image: url("images/milivoj-kuhar-Te48TPzdcU8-unsplash.JPG");
+    background-size: 100% auto;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .banner {
+        height: 275px;
+    }
+}
+
+.banner > .label {
+    background-color: rgba(255, 251, 219, .75);
+    color: var(--color-red-dark) !important;
+    font-weight: bold;
+    font-size: 2.5em;
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+@media(max-width: 600px) {
+    .banner > .label {
+        font-size: 1.5em;
+    }
+}
+
+#services .card {
+    background-color: var(--color-cream);
+    margin: 15px;
+}
+
+#services .card .card-title {
+    color: var(--color-grey-dark);
+    text-align: center;
+    font-weight: bold;
+}
+
+#services .card img {
+    height: 190px;
+}
+
+#services .card .btn {
+    background-color: var(--color-grey);
+    border: 1px sold var(--color-grey-dark);
+    color: var(--color-red);
+    font-weight: bold;
+}
+
+#services .card .btn:hover {
+    background-color: var(--color-grey-dark);
+}
+
+#service-info {
+    background-image: url("images/tekton-SVpCSOCcCwA-unsplash.JPG");
+    background-size: 100% auto;
+    width: 100%;
+    /* height: 500px; */
+}
+
+#service-info h2 {
+    background-color: rgba(255, 251, 219, .80);
+    color: var(--color-red-dark) !important;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    margin: 0;
+}
+
+#service-info .nav-link {
+    background-color: rgba(255, 251, 219, .75);
+    border: 1px solid var(--color-grey);
+}
+
+#service-info .nav-link.active {
+    background-color: rgba(255, 251, 219, 1);
+}
+
+#myTab, #myTabContent {
+    padding: 0 30px;
+    background-color: rgba(255, 251, 219, .80);
+}
+
+#myTabContent {
+    background-color: rgba(255, 251, 219, .80);
+}
+
+#myTabContent .tab-pane {
+    padding: 15px;
+}
+
+#ueber-mich {
+    padding: 30px;
+}
+
+@media (max-width: 600px) {
+    #ueber-mich {
+        flex-wrap: wrap;
+    }
+}
+
+#ueber-mich img {
+    max-width: 350px;
+    width: 100%;
+    border: 2px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+#ueber-mich .info {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: auto;
+    border: 2px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+@media (min-width: 600px) {
+    #ueber-mich .info {
+        margin-left: 15px;
+    }
+}
+
+#ueber-mich .info h2 {
+    color: var(--color-red-dark) !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer > .contactStuff {
+    padding: 15px;
+    background-color: var(--color-red-dark);
+    color: var(--color-white);
+    font-style: normal;
+}
+
+footer p, #impressumModal p {
+    margin-bottom: 0;
+}
+
+footer i, #impressumModal i {
+    margin-right: 8px;
+}
+
+footer a {
+    color: var(--color-white);
+}
+
+#officalStuff {
+    padding: 0 15px;
+    background-color: black;
+}
+
+#officalStuff button {
+    color: var(--color-grey);
+    border: none;
+    background-color: transparent;
+}
+
+.datenschutz h5 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.datenschutz h6 {
+    font-weight: bold;
+}
+
+
+
+
