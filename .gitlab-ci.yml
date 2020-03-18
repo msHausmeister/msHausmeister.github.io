@@ -1,10 +1,22 @@
+# pages:
+#  script:
+#  — mkdir .public
+#  — cp -r * .public
+#  — mv .public public
+#  artifacts:
+#     paths:
+#     — public
+#  only:
+#  — master
+
+image: alpine:latest
+
 pages:
- script:
- — mkdir .public
- — cp -r * .public
- — mv .public public
- artifacts:
+  stage: deploy
+  script:
+  - echo 'Nothing to do...'
+  artifacts:
     paths:
-    — public
- only:
- — master
+    - public
+  only:
+  - master
