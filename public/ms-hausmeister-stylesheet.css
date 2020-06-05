@@ -35,7 +35,7 @@ iframe {
     font-size: 1.25em;
 }
 
-.nav-link:hover, .nav-item.active .nav-link {
+.nav-link:hover, .nav-item.active .nav-link,  .nav-tabs .nav-link.active {
     color: var(--color-red-dark);
 }
 
@@ -220,11 +220,19 @@ iframe {
     }
 }
 
-#ueber-mich img {
-    max-width: 350px;
-    width: 100%;
+#ueber-mich .my-pic {
     border: 2px solid rgba(0,0,0,.125);
     border-radius: .25rem;
+}
+
+.my-pic img {
+    max-width: 350px;
+}
+
+@media (max-width: 575px) {
+    .my-pic img {
+        max-width: 100%;
+    }
 }
 
 #ueber-mich .info {
@@ -286,6 +294,43 @@ footer a {
     font-weight: bold;
 }
 
+#carousel-holder {
+    background-color: var(--color-cream);
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#msCarousel {
+    overflow: hidden;
+    width: 600px;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+#msCarousel .carousel-item {
+    height: 500px;
+}
+
+#msCarousel .carousel-item img {
+    height: 500px;
+}
+
+@media (max-width: 575px) {
+    #msCarousel {
+        width: 100%;
+        height: 300px;
+    }
+    #msCarousel .carousel-item {
+        height: 300px;
+    }
+    
+    #msCarousel .carousel-item img {
+        height: 300px;
+    }
+}
 
 
 
